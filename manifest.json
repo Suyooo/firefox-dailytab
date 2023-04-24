@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "name": "Daily Tab",
+  "description": "Automatically opens tabs at a given time every day.",
+  "version": "1.0",
+  "permissions": [
+    "alarms", "storage", "tabs"
+  ],
+  "homepage_url": "https://github.com/Suyooo/firefox-dailytab",
+  "icons": {
+    "48": "icon.svg",
+    "96": "icon.svg"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+	  "id": "firefox-dailytab@suyo.be",
+      "strict_min_version": "63.0a1"
+    }
+  },
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Daily Tab",
+    "default_popup": "tabs.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg"
+    },
+    "theme_icons": [{
+      "light": "icon-dark.svg",
+      "dark": "icon.svg",
+      "size": 16
+    }, {
+      "light": "icon-dark.svg",
+      "dark": "icon.svg",
+      "size": 32
+    }]
+  }
+}

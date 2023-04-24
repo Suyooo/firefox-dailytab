@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   fill="none"
+   stroke="#FFFFFF"
+   stroke-width="2"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   version="1.1"
+   id="svg6"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <path
+     id="rect464"
+     style="fill:#FFFFFF;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stop-color:#FFFFFF"
+     d="M 15.890625 10.484375 A 8.8900003 8.8900003 0 0 1 14.857422 12.484375 L 22.191406 12.484375 A 1 1 0 0 0 23.191406 11.484375 A 1 1 0 0 0 22.191406 10.484375 L 15.890625 10.484375 z " />
+  <path
+     id="rect2"
+     style="color:#FFFFFF;fill:#FFFFFF;stroke:none;-inkscape-stroke:none"
+     d="m 16.128906,5.0566406 a 8.8900003,8.8900003 0 0 1 0.306641,2 h 3.947265 c 0.465499,0 0.808594,0.3450488 0.808594,0.8105469 V 20.529297 c 0,0.465498 -0.343095,0.808594 -0.808594,0.808594 H 7.71875 c -0.4654981,0 -0.8085937,-0.343096 -0.8085938,-0.808594 v -4.273438 a 8.8900003,8.8900003 0 0 1 -2,-0.388671 v 4.662109 c 0,1.538901 1.2696922,2.808594 2.8085938,2.808594 h 12.664062 c 1.538903,0 2.808594,-1.269693 2.808594,-2.808594 V 7.8671875 c 0,-1.5389016 -1.269691,-2.8105469 -2.808594,-2.8105469 z" />
+  <circle
+     cx="7.5710983"
+     cy="7.4136577"
+     r="5.8902221"
+     id="circle239"
+     style="stroke-width:1.99999" />
+  <polyline
+     points="12 6 12 12 16 14"
+     id="polyline241"
+     transform="matrix(0.58902225,0,0,0.58902225,0.50283123,0.3453908)"
+     style="stroke-width:3.39546" />
+</svg>
