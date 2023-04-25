@@ -15,6 +15,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+function setUp() {
+    browser.alarms.create("dailytab-check-interval", {
+        periodInMinutes: 1
+    });
+    check();
+}
+browser.runtime.onInstalled.addListener(setUp);
+browser.runtime.onStartup.addListener(setUp);
+
 function check() {
     const checkTime = Date.now();
     browser.storage.local.get({tabs: [], lastCheckTime: checkTime})
@@ -50,19 +59,6 @@ function check() {
             browser.storage.local.set({lastCheckTime: checkTime});
         });
 }
-
-browser.runtime.onStartup.addListener(() => {
-    browser.alarms.get("dailytab-check-interval")
-        .then(result => {
-            if (result === undefined) {
-                browser.alarms.create("dailytab-check-interval", {
-                    periodInMinutes: 1
-                });
-                check();
-            }
-        });
-});
-
 browser.alarms.onAlarm.addListener((alarmInfo) => {
     if (alarmInfo.name === "dailytab-check-interval") check();
 })
