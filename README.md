@@ -9,7 +9,7 @@ launch sites for daily games such as Wordle.
 ## Installation
 
 Either download this add-on from
-[the Firefox Add-Ons site](https://addons.mozilla.org)
+[the Firefox Add-Ons site](https://addons.mozilla.org/addon/daily-tab/)
 , or download the source code and load the add-on as a temporary add-on via
 `about:debugging#/runtime/this-firefox`.
 
