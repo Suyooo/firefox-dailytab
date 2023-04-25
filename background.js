@@ -51,15 +51,17 @@ function check() {
         });
 }
 
-browser.alarms.get("dailytab-check-interval")
-    .then(result => {
-        if (result === undefined) {
-            browser.alarms.create("dailytab-check-interval", {
-                periodInMinutes: 1
-            });
-            check();
-        }
-    });
+browser.runtime.onStartup.addListener(() => {
+    browser.alarms.get("dailytab-check-interval")
+        .then(result => {
+            if (result === undefined) {
+                browser.alarms.create("dailytab-check-interval", {
+                    periodInMinutes: 1
+                });
+                check();
+            }
+        });
+});
 
 browser.alarms.onAlarm.addListener((alarmInfo) => {
     if (alarmInfo.name === "dailytab-check-interval") check();
