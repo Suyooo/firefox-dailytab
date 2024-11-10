@@ -40,7 +40,10 @@ function domToObject() {
             anyErrorsFound = true;
         }
         
-        tabs.push({time: timeElement.value, url});
+        const preloadElement = row.querySelector(".tab-preload input");
+        const preload = !!preloadElement.checked;
+        
+        tabs.push({time: timeElement.value, url, preload});
     }
     return anyErrorsFound ? null : tabs;
 }
@@ -53,9 +56,10 @@ function objectToDom(tabs) {
     }
     
     for (const tab of tabs) {
-        const {row, inputTime, inputUrl} = addRow();
+        const {row, inputTime, inputUrl, inputPreload} = addRow();
         inputTime.value = tab.time;
         inputUrl.value = tab.url;
+        inputPreload.checked = tab.preload;
     }
 }
 
@@ -81,6 +85,13 @@ function addRow() {
     tdUrl.appendChild(inputUrl);
     row.appendChild(tdUrl);
     
+    const tdPreload = document.createElement("td");
+    tdPreload.className = "tab-preload";
+    const inputPreload = document.createElement("input");
+    inputPreload.type = "checkbox";
+    tdPreload.appendChild(inputPreload);
+    row.appendChild(tdPreload);
+    
     const tdRemove = document.createElement("td");
     tdRemove.className = "tab-remove";
     const buttonRemove = document.createElement("button");
@@ -92,7 +103,7 @@ function addRow() {
     row.appendChild(tdRemove);
     
     document.getElementById("tabs-list").appendChild(row);
-    return {row, inputTime, inputUrl};
+    return {row, inputTime, inputUrl, inputPreload};
 }
 
 document.getElementById("add-button").addEventListener("click", (e) => {

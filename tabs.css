@@ -32,7 +32,11 @@ table {
   width: 100%;
 }
 
-tr input, tr button {
+th, td {
+  text-align: center;
+}
+
+tr input:not([type=checkbox]), tr button {
   width: 100%;
 }
 

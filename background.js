@@ -42,9 +42,9 @@ function check() {
                     try {
                         browser.tabs.create({
                             url: tab.url,
-                            title: "[Daily Tab] " + tab.url,
+                            title: !tab.preload ? "[Daily Tab] " + tab.url : undefined,
                             active: false,
-                            discarded: true
+                            discarded: !tab.preload
                         });
                     } catch (e) {
                         // Firefox Android does not support active/discarded
